@@ -57,6 +57,16 @@ class HomeController extends Controller
         $data['selectedYear'] = $year;
         $data['selectedMonth'] = $month;
 
+        $incomes = Income::where('user_id', Auth::id())->get();
+
+        $expenses = Expense::where('user_id', Auth::id())->get();
+
+        $data['totalIncomes'] = $incomes->sum('income_amount');
+
+        $data['totalExpenses'] = $expenses->sum('expense_amount');
+
+        $data['totalBalance'] = $data['totalIncomes'] - $data['totalExpenses'];
+
         return view('pages.dashboard', $data);
     }
 
