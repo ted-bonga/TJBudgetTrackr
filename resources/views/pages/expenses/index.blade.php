@@ -45,7 +45,12 @@
                             </div>
                             <div>{{ $expense->expense_title }}</div>
                             <div class="font-weight-bold"><span style="font-weight:900;">€ </span> {{ $expense->expense_amount }}</div>
-                            <div>{{ $expense->type->name }}</div>
+                            @foreach($types as $type)
+                                @if($type->id === $expense->type_id)
+                                    <div class="font-weight-bold"> {{ $type->name }}</div>
+                                @endif
+                            @endforeach
+{{--                            <div>{{ $expense->type->name }}</div>--}}
                             <div> {{ $expense->expense_date }}</div>
                         </div>
                     </div>
