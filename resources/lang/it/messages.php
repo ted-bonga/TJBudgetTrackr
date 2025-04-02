@@ -13,6 +13,7 @@ return [
     'total_income' => 'Entrate totali',
     'total_expense' => 'Spese totali',
     'total_summary' => 'Sommario totale',
+    'total_cost' => 'Spese totale',
     'balance' => 'Saldo',
 
     'view_all_summary' => 'Vedi tutto il riepilogo',
