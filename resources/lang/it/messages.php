@@ -7,6 +7,7 @@ return [
 
     'select_year' => 'Seleziona l\' anno',
     'select_month' => 'Seleziona il mese',
+    'all_data' => 'Tutti i dati',
     'filter' => 'Filtra',
 
     'this_month_cost' => 'Spese di questo mese',
